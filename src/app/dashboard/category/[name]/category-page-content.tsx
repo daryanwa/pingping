@@ -168,10 +168,6 @@ export const CategoryPageContent = ({
     },
   })
 
-  /**
-   * I FORGOT THIS IN THE VIDEO
-   * Update URL when pagination changes
-   */
   const router = useRouter()
 
   useEffect(() => {
@@ -180,10 +176,6 @@ export const CategoryPageContent = ({
     searchParams.set("limit", pagination.pageSize.toString())
     router.push(`?${searchParams.toString()}`, { scroll: false })
   }, [pagination, router])
-
-  /**
-   * END OF WHAT I FORGOT IN THE VIDEO
-   */
 
   const numericFieldSums = useMemo(() => {
     if (!data?.events || data.events.length === 0) return {}

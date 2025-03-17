@@ -3,19 +3,12 @@ import { MaxWidthWrapper } from "../../components/max-width-wrapper"
 import { Check, Star } from "lucide-react"
 import { ShinyButton } from "../../components/shiny-button"
 import { MockDiscordUI } from "@/components/mock-discord-ui"
-import {
-  AnimatedList,
-  AnimatedListItem,
-} from "@/components/magicui/animated-list"
+import { AnimatedList } from "@/components/magicui/animated-list"
 import { DiscordMessage } from "@/components/discord-message"
 import Image from "next/image"
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
-// import { style } from "react-syntax-highlighter/dist/esm/styles/{hljs|prism}"
 import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism"
 import { Icons } from "@/components/icons"
-// import { DeleteCache } from "./delete-cache"
-import { Button } from "@/components/ui/button"
-import { QueryClientProvider } from "@tanstack/react-query"
 
 const Page = () => {
   const codeSnippet = `await fetch("http://localhost:3000/api/v1/events", {

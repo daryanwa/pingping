@@ -1,7 +1,6 @@
 "use client"
 
 import { client } from "@/app/lib/client"
-import { createCheckoutSession } from "@/app/lib/stripe"
 import { Heading } from "@/components/heading"
 import { MaxWidthWrapper } from "@/components/max-width-wrapper"
 import { Button } from "@/components/ui/button"

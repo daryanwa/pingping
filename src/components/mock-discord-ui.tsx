@@ -10,7 +10,6 @@ import {
   Mic,
   Phone,
   Pin,
-  PlayCircle,
   PlusCircle,
   Search,
   Smile,
