@@ -1,5 +1,16 @@
 {
-  "/api/[[...route]]/route": "app/api/[[...route]]/route.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/webhooks/stripe/route": "app/api/webhooks/stripe/route.js",
+  "/api/v1/events/route": "app/api/v1/events/route.js",
+  "/(auth)/sign-up/[[...rest]]/page": "app/(auth)/sign-up/[[...rest]]/page.js",
+  "/(landing)/pricing/page": "app/(landing)/pricing/page.js",
+  "/dashboard/(settings)/account-settings/page": "app/dashboard/(settings)/account-settings/page.js",
   "/(landing)/page": "app/(landing)/page.js",
-  "/dashboard/page": "app/dashboard/page.js"
+  "/dashboard/page": "app/dashboard/page.js",
+  "/(auth)/sign-in/[[...rest]]/page": "app/(auth)/sign-in/[[...rest]]/page.js",
+  "/(auth)/welcome/page": "app/(auth)/welcome/page.js",
+  "/dashboard/(account)/upgrade/page": "app/dashboard/(account)/upgrade/page.js",
+  "/dashboard/(settings)/api-key/page": "app/dashboard/(settings)/api-key/page.js",
+  "/dashboard/category/[name]/page": "app/dashboard/category/[name]/page.js",
+  "/api/[[...route]]/route": "app/api/[[...route]]/route.js"
 }

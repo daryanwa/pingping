@@ -10,10 +10,10 @@ import {
 import { DiscordMessage } from "@/components/discord-message"
 import Image from "next/image"
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
-import { style } from "react-syntax-highlighter/dist/esm/styles/{hljs|prism}"
+// import { style } from "react-syntax-highlighter/dist/esm/styles/{hljs|prism}"
 import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism"
 import { Icons } from "@/components/icons"
-import { DeleteCache } from "./delete-cache"
+// import { DeleteCache } from "./delete-cache"
 import { Button } from "@/components/ui/button"
 import { QueryClientProvider } from "@tanstack/react-query"
 

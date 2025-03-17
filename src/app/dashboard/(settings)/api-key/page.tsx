@@ -2,7 +2,7 @@ import { DashboardPage } from "@/components/dashboard-page"
 import { db } from "@/db"
 import { currentUser } from "@clerk/nextjs/server"
 import { redirect } from "next/navigation"
-import { AccountSettings } from "./account-settings-page-content"
+// import { AccountSettings } from "./account-settings-page-content"
 import { ApiKeysSettings } from "./api-key-settings-page"
 
 const Page = async () => {
