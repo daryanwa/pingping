@@ -1,34 +1,39 @@
 import { Hono } from "hono"
 import { cors } from "hono/cors"
 import { handle } from "hono/vercel"
-import { authRouter } from "./routers/auth-router"
-import { categoryRouters } from "./routers/category-router"
-import { paymentRouter } from "./routers/payment-router"
-import { projectRouter } from "./routers/project-router"
 
-const app = new Hono().basePath("/api").use(cors())
+const app = new Hono().basePath("/api")
 
-/**
- * This is the primary router for your server.
- *
- * All routers added in /server/routers should be manually added here.
- */
+// Применяем CORS только к нужным маршрутам
+app.use("/auth/*", cors())
+app.use("/category/*", cors())
+app.use("/payment/*", cors())
+app.use("/project/*", cors())
+
+// Динамические импорты для маршрутов
 const appRouter = app
-  .route("/auth", authRouter)
-  .route("/category", categoryRouters)
-  .route("/payment", paymentRouter)
-  .route("project", projectRouter)
+  .route(
+    "/auth",
+    await import("./routers/auth-router").then((m) => m.authRouter)
+  )
+  .route(
+    "/category",
+    await import("./routers/category-router").then((m) => m.categoryRouters)
+  )
+  .route(
+    "/payment",
+    await import("./routers/payment-router").then((m) => m.paymentRouter)
+  )
+  .route(
+    "/project",
+    await import("./routers/project-router").then((m) => m.projectRouter)
+  )
 
-// The handler Next.js uses to answer API requests
+// Экспорт обработчика для Next.js
 export const httpHandler = handle(app)
 
-/**
- * (Optional)
- * Exporting our API here for easy deployment
- *
- * Run `npm run deploy` for one-click API deployment to Cloudflare's edge network
- */
+// Экспорт приложения для развертывания
 export default app
 
-// export type definition of API
+// Экспорт типов для TypeScript
 export type AppType = typeof appRouter
