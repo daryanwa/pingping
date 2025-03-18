@@ -1,7 +1,7 @@
 import { stripe } from "@/app/lib/stripe"
 import { db } from "@/db"
 import { headers } from "next/headers"
-import Stripe from "stripe"
+import { Stripe } from "stripe"
 
 export async function POST(req: Request) {
   const body = await req.text()
