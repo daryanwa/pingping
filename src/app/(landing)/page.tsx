@@ -289,13 +289,6 @@ const Page = () => {
                 satisfying.
               </p>
               <div className="flex flex-col justify-center lg:justify-start sm:flex-row items-center sm:items-start gap-4 mt-2">
-                <Image
-                  src="/user-2.png"
-                  className="rounded-full object-cover"
-                  alt="Random user"
-                  width={48}
-                  height={48}
-                />
                 <div className="flex flex-col items-center sm:items-start">
                   <p className="font-semibold flex items-center">
                     Freya Larson
@@ -319,13 +312,6 @@ const Page = () => {
                 lives easier.
               </p>
               <div className="flex flex-col justify-center lg:justify-start sm:flex-row items-center sm:items-start gap-4 mt-2">
-                <Image
-                  src="/user-1.png"
-                  className="rounded-full object-cover"
-                  alt="Random user"
-                  width={48}
-                  height={48}
-                />
                 <div className="flex flex-col items-center sm:items-start">
                   <p className="font-semibold flex items-center">
                     Kai Durant
