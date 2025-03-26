@@ -6,7 +6,7 @@ import { MockDiscordUI } from "@/components/mock-discord-ui"
 import { AnimatedList } from "@/components/magicui/animated-list"
 import { DiscordMessage } from "@/components/discord-message"
 import Image from "next/image"
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
+
 import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism"
 import { Icons } from "@/components/icons"
 
@@ -239,23 +239,7 @@ const Page = () => {
                     </div>
                     <div className="overflow-hidden">
                       <div className="max-h-[30rem] lg:text-[10.4px] ">
-                        <SyntaxHighlighter
-                          language="typescript"
-                          style={{
-                            ...oneDark,
-                            'pre[class*="language-"]': {
-                              ...oneDark['pre[class*="language-"]'],
-                              background: "transparent",
-                              overflow: "hidden",
-                            },
-                            'code[class*="language-"]': {
-                              ...oneDark['code[class*="language-"]'],
-                              background: "transparent",
-                            },
-                          }}
-                        >
-                          {codeSnippet}
-                        </SyntaxHighlighter>
+                        {codeSnippet}
                       </div>
                     </div>
                   </div>
