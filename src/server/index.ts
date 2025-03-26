@@ -7,8 +7,8 @@ const app = new Hono().basePath("/api")
 // Применяем CORS только к нужным маршрутам
 app.use("/auth/*", cors())
 app.use("/category/*", cors())
-app.use("/payment/*", cors())
-app.use("/project/*", cors())
+app.use("/payment/*")
+app.use("/project/*")
 
 // Динамические импорты для маршрутов
 const appRouter = app
