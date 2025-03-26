@@ -1,9 +1,7 @@
 "use client"
 
-import { client } from "@/app/lib/client"
 import { Card } from "@/components/card"
 import { Plan } from "@prisma/client"
-import { useMutation, useQuery } from "@tanstack/react-query"
 import { format } from "date-fns"
 import { BarChart } from "lucide-react"
 import { useRouter } from "next/navigation"
@@ -11,13 +9,13 @@ import { useRouter } from "next/navigation"
 export const UpgradePageContent = ({ plan }: { plan: Plan }) => {
   const router = useRouter()
 
-  const { data: usageData } = useQuery({
-    queryKey: ["usage"],
-    queryFn: async () => {
-      const res = await client.project.getUsage.$get()
-      return await res.json()
-    },
-  })
+  const usageData = {
+    eventsUsed: 0,
+    eventsLimit: 0,
+    categoriesUsed: 0,
+    categoriesLimit: 0,
+    resetDate: 0,
+  }
   const alertA = alert("This is should be route... But something went wrong :(")
   return (
     <div className="max-w-3xl flex flex-col gap-8">

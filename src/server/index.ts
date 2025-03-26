@@ -20,10 +20,6 @@ const appRouter = app
     "/category",
     await import("./routers/category-router").then((m) => m.categoryRouters)
   )
-  .route(
-    "/project",
-    await import("./routers/project-router").then((m) => m.projectRouter)
-  )
 
 // Экспорт обработчика для Next.js
 export const httpHandler = handle(app)

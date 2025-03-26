@@ -15,13 +15,7 @@ export const AccountSettings = ({
 }) => {
   const [discordId, setDiscordId] = useState(initialDeiscordId)
 
-  const { mutate, isPending } = useMutation({
-    mutationFn: async (discordId: string) => {
-      const res = await client.project.setDiscordId.$post({ discordId })
-
-      return await res.json()
-    },
-  })
+  const isPending = true
 
   return (
     <Card className="max-w-xl w-full space-y-4">
@@ -44,9 +38,7 @@ export const AccountSettings = ({
       </p>
 
       <div className="pt-4">
-        <Button onClick={() => mutate(discordId)} disabled={isPending}>
-          {isPending ? "Saving..." : "Save Changes"}
-        </Button>
+        <Button>{isPending ? "Saving..." : "Save Changes"}</Button>
       </div>
     </Card>
   )
