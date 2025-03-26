@@ -3,8 +3,6 @@ import { Card } from "@/components/card"
 import { useQuery } from "@tanstack/react-query"
 import { useRouter } from "next/navigation"
 import { useEffect } from "react"
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
-import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism"
 
 export const EmptyCategoryState = ({
   categoryName,
@@ -68,19 +66,7 @@ export const EmptyCategoryState = ({
           <span className="text-gray-400 text-sm">your-first-event.js</span>
         </div>
 
-        <SyntaxHighlighter
-          language="javascript"
-          style={atomDark}
-          customStyle={{
-            borderRadius: "0px",
-            margin: 0,
-            padding: "1rem",
-            fontSize: "0.875rem",
-            lineHeight: "1.5",
-          }}
-        >
-          {codeSnippet}
-        </SyntaxHighlighter>
+        {codeSnippet}
       </div>
 
       <div className="mt-8 flex flex-col items-center space-x-2">
