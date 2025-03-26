@@ -31,7 +31,7 @@ const SIDEBAR_ITEMS: SidebarCategory[] = [
   {
     category: "Settings",
     items: [
-      { href: "/dashboard/api-key", icon: Key, text: "API Key" },
+      // { href: "/dashboard/api-key", icon: Key, text: "API Key" },
       {
         href: "/dashboard/account-settings",
         icon: Settings,

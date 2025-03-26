@@ -1,1 +1,0 @@
-"use strict";exports.id=77,exports.ids=[77],exports.modules={89077:(e,t,o)=>{o.r(t),o.d(t,{CategoryPageContent:()=>r});let r=(0,o(68570).createProxy)(String.raw`C:\Users\asaww\Desktop\portfolio2\pingping\src\app\dashboard\category\[name]\category-page-content.tsx#CategoryPageContent`)}};
