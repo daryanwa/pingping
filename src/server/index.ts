@@ -21,10 +21,6 @@ const appRouter = app
     await import("./routers/category-router").then((m) => m.categoryRouters)
   )
   .route(
-    "/payment",
-    await import("./routers/payment-router").then((m) => m.paymentRouter)
-  )
-  .route(
     "/project",
     await import("./routers/project-router").then((m) => m.projectRouter)
   )

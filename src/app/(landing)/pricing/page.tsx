@@ -20,23 +20,7 @@ const Page = () => {
     "Priority support",
   ]
 
-  const { mutate: createCheckoutSession } = useMutation({
-    mutationFn: async () => {
-      const res = await client.payment.createCheckoutSession.$post()
-      return await res.json()
-    },
-    onSuccess: ({ url }) => {
-      if (url) router.push(url)
-    },
-  })
-
-  const handleGetAccess = () => {
-    if (user) {
-      createCheckoutSession()
-    } else {
-      router.push("/sign-in?intent=upgrage")
-    }
-  }
+  const alertA = alert("This is should be route... But something went wrong :(")
 
   return (
     <div className="bg-brand-25 py-24 sm:py-32">
@@ -92,7 +76,7 @@ const Page = () => {
                   </span>
                 </p>
 
-                <Button onClick={handleGetAccess} className="mt-6 px-20">
+                <Button onClick={() => alertA} className="mt-6 px-20">
                   Get PingPanda
                 </Button>
                 <p className="mt-6 text-xs leading-5 text-gray-600">

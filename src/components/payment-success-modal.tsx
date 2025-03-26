@@ -13,16 +13,10 @@ export const PaymentSuccessModal = () => {
   const router = useRouter()
   const [isOpen, setIsOpen] = useState(true)
 
-  const { data, isPending } = useQuery({
-    queryKey: ["user-plan"],
-    queryFn: async () => {
-      const res = await client.payment.getUserPlan.$get()
-      return await res.json()
-    },
-    refetchInterval: (query) => {
-      return query.state.data?.plan === "PRO" ? false : 1000
-    },
-  })
+  const data = {
+    plan: "PRO",
+  }
+  const isPending = false
 
   const handleClose = () => {
     setIsOpen(false)

@@ -11,16 +11,6 @@ import { useRouter } from "next/navigation"
 export const UpgradePageContent = ({ plan }: { plan: Plan }) => {
   const router = useRouter()
 
-  const { mutate: createCheckoutSession } = useMutation({
-    mutationFn: async () => {
-      const res = await client.payment.createCheckoutSession.$post()
-      return await res.json()
-    },
-    onSuccess: ({ url }) => {
-      if (url) router.push(url)
-    },
-  })
-
   const { data: usageData } = useQuery({
     queryKey: ["usage"],
     queryFn: async () => {
@@ -28,7 +18,7 @@ export const UpgradePageContent = ({ plan }: { plan: Plan }) => {
       return await res.json()
     },
   })
-
+  const alertA = alert("This is should be route... But something went wrong :(")
   return (
     <div className="max-w-3xl flex flex-col gap-8">
       <div>
@@ -84,7 +74,7 @@ export const UpgradePageContent = ({ plan }: { plan: Plan }) => {
         )}
         {plan !== "PRO" ? (
           <span
-            onClick={() => createCheckoutSession()}
+            onClick={() => alertA}
             className="inline cursor-pointer underline text-brand-600"
           >
             {" "}
